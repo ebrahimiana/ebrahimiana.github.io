@@ -31,7 +31,6 @@
         d3.csv("table-3.csv", function (data) {
 
             // List of subgroups = header of the csv files = soil condition here
-            debugger;
             var subgroups = data.columns.slice(1)
 
             // List of groups = species here = value of the first column called group -> I show them on the X axis
@@ -62,7 +61,7 @@
             // color palette = one color per subgroup
             var color = d3.scaleOrdinal()
                 .domain(subgroups)
-                .range(['#e41a1c', '#377eb8', '#4daf4a'])
+                .range(['#e41a1c', '#377eb8', '#4daf4a', '#de9d26'])
 
             // Show the bars
             svg.append("g")
